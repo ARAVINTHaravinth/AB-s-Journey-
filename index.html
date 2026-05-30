@@ -1,76 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story ❤️</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story ❤️</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
+<!-- Music Button -->
+<button id="musicBtn" onclick="toggleMusic()">
+    🎵 Play Music
+</button>
 
-    <div class="slideshow">
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
 
-        <div class="slide">
-            <img src="photo1.jpg" alt="">
-            <div class="caption">A beautiful beginning ❤️</div>
-        </div>
+<div class="slideshow">
 
-        <div class="slide">
-            <img src="photo2.jpg" alt="">
-            <div class="caption">Moments worth remembering ✨</div>
-        </div>
-
-        <div class="slide">
-            <img src="photo3.jpg" alt="">
-            <div class="caption">Smiles that stay forever 😊</div>
-        </div>
-
-        <div class="slide">
-            <img src="photo4.jpg" alt="">
-            <div class="caption">A special chapter 💕</div>
-        </div>
-
-        <div class="slide">
-            <img src="photo5.jpg" alt="">
-            <div class="caption">Memories I cherish ❤️</div>
-        </div>
-
-        <div class="slide">
-            <img src="photo6.jpg" alt="">
-            <div class="caption">Every moment matters ♾️</div>
-        </div>
-
-        <div class="slide">
-            <img src="photo7.jpg" alt="">
-            <div class="caption">My favorite story ✨</div>
-        </div>
-
+    <div class="slide">
+        <img src="photo1.jpg">
     </div>
 
-    <div class="message">
-        <h1>❤️ Our Story ❤️</h1>
+    <div class="slide">
+        <img src="photo2.jpg">
+    </div>
 
-        <p>
-            Some memories fade with time.<br>
-            Some memories become part of who we are.<br><br>
+    <div class="slide">
+        <img src="photo3.jpg">
+    </div>
 
-            Every picture here tells a story.<br>
-            Every story carries a feeling.<br><br>
+    <div class="slide">
+        <img src="photo4.jpg">
+    </div>
 
-            Through every smile, every laugh, and every moment,
-            one thing has remained constant... ❤️<br><br>
+    <div class="slide">
+        <img src="photo5.jpg">
+    </div>
 
-            You.
-        </p>
+    <div class="slide">
+        <img src="photo6.jpg">
+    </div>
 
-        <div class="forever">
-            ♾️ Made For Each Other ♾️
-        </div>
+    <div class="slide">
+        <img src="photo7.jpg">
     </div>
 
 </div>
+
+<div class="overlay">
+
+    <h1>❤️ Our Story ❤️</h1>
+
+    <p>
+        Every memory tells a story.<br>
+        Every story holds a feeling.<br><br>
+
+        Through every smile,
+        every laugh,
+        every moment shared...<br><br>
+
+        one thing has remained constant ❤️
+    </p>
+
+    <div class="forever">
+        ♾️ Made For Each Other ♾️
+    </div>
+
+</div>
+
+<script>
+
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+
+    if (music.paused) {
+
+        music.play();
+
+        btn.innerHTML = "⏸ Pause Music";
+
+    } else {
+
+        music.pause();
+
+        btn.innerHTML = "🎵 Play Music";
+    }
+}
+
+</script>
 
 </body>
 </html>
