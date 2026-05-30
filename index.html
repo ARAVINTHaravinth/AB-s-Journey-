@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Story ❤️</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
 <audio id="bgMusic" loop>
     <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<div id="intro">
-    ❤️ A Beautiful Story ❤️
+<!-- Welcome Screen -->
+<div id="startScreen">
+
+    <h1>❤️ Our Story ❤️</h1>
+
+    <p>
+        Every memory has a story...<br>
+        Every story has a reason...
+    </p>
+
+    <button onclick="startExperience()">
+        Begin Our Story ❤️
+    </button>
+
 </div>
 
-<div id="mainContent">
+<!-- Main Content -->
+<div id="mainContent" style="display:none;">
 
     <div class="slideshow">
 
@@ -56,25 +60,16 @@
 
 <script>
 
-window.onload = function() {
+function startExperience() {
 
-    setTimeout(function(){
+    document.getElementById("startScreen").style.display = "none";
 
-        document.getElementById("intro").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
 
-        document.getElementById("mainContent").style.display = "block";
+    document.getElementById("bgMusic").play();
 
-        const music = document.getElementById("bgMusic");
-
-        music.play().catch(() => {
-            console.log("Autoplay blocked by browser");
-        });
-
-    }, 2000);
-
-};
+}
 
 </script>
 
 </body>
-</html>
