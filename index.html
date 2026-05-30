@@ -4,71 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Story ❤️</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Music Button -->
 <button id="musicBtn" onclick="toggleMusic()">
-    🎵 Play Music
+🎵 Play Music
 </button>
 
 <audio id="bgMusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
+<source src="song.mp3" type="audio/mpeg">
 </audio>
 
 <div class="slideshow">
 
-    <div class="slide">
-        <img src="photo1.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo2.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo3.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo4.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo5.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo6.jpg">
-    </div>
-
-    <div class="slide">
-        <img src="photo7.jpg">
-    </div>
+<div class="slide"><img src="photo1.jpg"></div>
+<div class="slide"><img src="photo2.jpg"></div>
+<div class="slide"><img src="photo3.jpg"></div>
+<div class="slide"><img src="photo4.jpg"></div>
+<div class="slide"><img src="photo5.jpg"></div>
+<div class="slide"><img src="photo6.jpg"></div>
+<div class="slide"><img src="photo7.jpg"></div>
 
 </div>
 
 <div class="overlay">
 
-    <h1>❤️ Our Story ❤️</h1>
+<h1>❤️ Our Story ❤️</h1>
 
-    <p>
-        Every memory tells a story.<br>
-        Every story holds a feeling.<br><br>
+<p>
+Every memory tells a story.<br>
+Every story holds a feeling.<br><br>
 
-        Through every smile,
-        every laugh,
-        every moment shared...<br><br>
+Through every smile,<br>
+every laugh,<br>
+every moment shared...<br><br>
 
-        one thing has remained constant ❤️
-    </p>
+one thing has remained constant ❤️
+</p>
 
-    <div class="forever">
-        ♾️ Made For Each Other ♾️
-    </div>
+<div class="forever">
+♾️ We Were Meant For Each Other ♾️
+</div>
 
 </div>
 
@@ -77,20 +55,20 @@
 const music = document.getElementById("bgMusic");
 const btn = document.getElementById("musicBtn");
 
-function toggleMusic() {
+function toggleMusic(){
 
-    if (music.paused) {
+if(music.paused){
 
-        music.play();
+music.play();
+btn.innerHTML="⏸ Pause Music";
 
-        btn.innerHTML = "⏸ Pause Music";
+}else{
 
-    } else {
+music.pause();
+btn.innerHTML="🎵 Play Music";
 
-        music.pause();
+}
 
-        btn.innerHTML = "🎵 Play Music";
-    }
 }
 
 </script>
